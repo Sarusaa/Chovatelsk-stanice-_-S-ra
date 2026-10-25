@@ -1,0 +1,356 @@
+:root {
+  --pozadi: #ececec;
+  --pisek: #c5beb6;
+  --hneda: #837873;
+  --text: #25251f;
+  --karta: #eeeeee;
+}
+
+body.dark {
+  --pozadi: #1d1c19;
+  --pisek: #2e2a26;
+  --hneda: #b08568;
+  --text: #f1ece6;
+  --karta: #26231f;
+}
+
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: "Jost", Arial, sans-serif;
+  background-color: var(--pozadi);
+  color: var(--text);
+  line-height: 1.5;
+}
+h1, h2, h3 { 
+  letter-spacing: 2px;
+  margin: 0; 
+}
+
+h1 {
+  font-size: 40px;
+}
+
+h2 {
+  font-size: 30px;
+  text-align: center;
+}
+
+section {
+  padding: 60px 20px;
+}
+
+.box {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.box.siroky {
+  max-width: 1400px;
+}
+
+.uvod {
+  text-align: center;
+  max-width: 600px;
+  margin: 14px auto 0;
+}
+
+.maly-nadpis { text-align: center;
+  letter-spacing: 4px;
+  font-size: 12px;
+  color: var(--hneda);
+}
+
+.pisek {
+  background-color: var(--pisek);
+}
+
+.tlacitko {
+  display: inline-block;
+  background-color: var(--hneda);
+  color: white;
+  border: 2px solid var(--hneda);
+  padding: 12px 24px;
+  border-radius: 30px;
+  text-decoration: none;
+  letter-spacing: 2px;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.karta a.tlacitko {
+  color: white;
+}
+
+.tlacitko.svetle {
+  background-color: transparent;
+  color: var(--hneda);
+}
+
+.tlacitka {
+  text-align: center;
+  margin-top: 24px;
+}
+
+.tlacitka .tlacitko {
+  margin: 6px; 
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 8px 26px;
+  padding: 16px 20px;
+  background-color: var(--karta);
+  border-bottom: 2px solid var(--pisek);
+}
+
+nav a {
+  color: var(--text);
+  text-decoration: none;
+  letter-spacing: 2px;
+  font-size: 13px;
+  padding: 6px 0;
+  border-bottom: 2px solid transparent;
+}
+
+nav a:hover {
+  color: var(--hneda);
+}
+
+nav a.aktivni {
+  color: var(--hneda);
+  border-bottom: 2px solid var(--hneda);
+}
+
+#prepinac {
+  font-family: inherit;
+  background-color: var(--karta);
+  color: var(--text);
+  border: 2px solid var(--hneda);
+  border-radius: 30px;
+  padding: 6px 14px;
+  cursor: pointer;
+}
+
+header { 
+  text-align: center;
+  padding: 60px 20px 40px;
+}
+
+.stitky {
+  margin-top: 24px;
+}
+
+.stitek {
+  display: inline-block;
+  background-color: var(--pisek);
+  padding: 8px 20px;
+  border-radius: 30px;
+  margin: 4px;
+  font-size: 13px;
+}
+
+.stitek.aktivni {
+  background-color: var(--hneda);
+  color: white;
+}
+
+.kroky {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.krok {
+  flex: 1;
+  min-width: 220px;
+  background-color: var(--pozadi);
+  border-radius: 20px;
+  padding: 24px;
+  text-align: center;
+}
+
+.krok .cislo {
+  font-size: 32px; color: var(--hneda);
+}
+
+.cisla {
+  display: flex; 
+  flex-wrap: wrap;
+}
+
+.cisla div {
+  flex: 1;
+  min-width: 150px;
+  padding: 30px 10px;
+  text-align: center;
+  color: white;
+}
+
+.cisla b {
+  display: block;
+  font-size: 30px;
+}
+
+.tmava {
+  background-color: #25251f;
+}
+
+.hneda {
+  background-color: var(--hneda);
+}
+
+.karty {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.karta {
+  width: 300px;
+  background-color: var(--karta);
+  border: 2px solid var(--text);
+  border-radius: 24px;
+  padding: 20px;
+}
+
+.foto {
+  height: 200px;
+  background-color: var(--pisek);
+  border-radius: 16px;
+  text-align: center;
+  line-height: 200px;   /* text uprostřed výšky */
+  color: var(--hneda);
+  position: relative;
+}
+
+.foto img,
+.galerie img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 16px; 
+  display: block;
+}
+
+.stav {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  line-height: 1.5;
+  font-size: 12px;
+  color: white;
+  padding: 4px 12px;
+  border-radius: 20px;
+}
+
+.volne {
+  background-color: #5e7d5a;
+}
+
+.rezervace {
+  background-color: #b8873b;
+}
+
+.domov {
+  background-color: #6b6b66;
+}
+.karta h3 {
+  margin-top: 14px;
+}
+
+.karta h3 small {
+  font-size: 12px; color: var(--hneda);
+}
+.karta h4 {
+  margin: 14px 0 4px;
+  font-size: 12px;
+  letter-spacing: 2px;
+  color: var(--hneda);
+}
+
+.karta ul {
+  margin: 0;
+  padding-left: 18px;
+  font-size: 14px;
+}
+
+.karta a {
+  color: var(--hneda);
+}
+
+.karta .tlacitko {
+  margin-top: 16px;
+  padding: 8px 16px;
+  font-size: 12px;
+}
+
+.galerie {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  margin-top: 30px; 
+}
+
+.galerie div {
+  height: 220px;
+  background-color: var(--pozadi);
+  border-radius: 16px;
+  text-align: center;
+  line-height: 220px;
+  color: var(--hneda);
+  flex: 1;
+  min-width: 0;
+}
+
+.cena {
+  background-color: var(--pisek);
+  border-radius: 24px;
+  padding: 30px 20px;
+  text-align: center;
+}
+footer {
+  text-align: center;
+  padding: 30px 20px 90px;
+  font-size: 14px;
+}
+
+#lista { display: none; }
+@media (max-width: 700px) {
+  #lista {
+    display: flex;
+    gap: 10px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 10px;
+    background-color: var(--pozadi);
+  }
+
+  #lista a {
+    flex: 1;
+    text-align: center;
+  }
+
+  h1 {
+    font-size: 30px;
+  }
+
+  .galerie {
+    flex-wrap: wrap;
+  }
+
+  .galerie div {
+    flex: none;
+    width: calc(25% - 9px);
+    height: 110px;
+    line-height: 110px;
+  }
+}
